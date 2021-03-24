@@ -11,9 +11,9 @@
 
 @interface MMCycleView()<UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property(nonatomic, strong) NSMutableArray *MMImageArray;    ///< 存储显示图片数组
+@property(nonatomic, strong) NSMutableArray *MMImageArray;
 
-@property(nonatomic, assign) NSInteger MMTotalImageCount;    ///< 单次总轮播次数(轮播数量*100)
+@property(nonatomic, assign) NSInteger MMTotalImageCount;
 
 @property(nonatomic, strong) NSTimer *MMTimer;
 
@@ -151,7 +151,7 @@ static NSString *CellID = @"CellID";
 	_localImgArr = localImgArr;
 	
 	NSMutableArray *locationImages = [NSMutableArray arrayWithCapacity:localImgArr.count];
-	for (NSInteger i=0; i<localImgArr.count; i++) {
+	for (NSInteger i = 0; i < localImgArr.count; i++) {
 		UIImage *image = [UIImage imageNamed:localImgArr[i]];
 		[locationImages addObject:image];
 	}
@@ -162,7 +162,7 @@ static NSString *CellID = @"CellID";
 	_networkImgArr = networkImgArr;
 	
 	NSMutableArray *netWorkImages = [NSMutableArray arrayWithCapacity:networkImgArr.count];
-	for (NSInteger i = 0; i<networkImgArr.count; i++) {
+	for (NSInteger i = 0; i < networkImgArr.count; i++) {
 		
 		if ([networkImgArr[i] isKindOfClass:[NSString class]]) {
 			NSURL *urlImg = [NSURL URLWithString:networkImgArr[i]];
@@ -189,8 +189,7 @@ static NSString *CellID = @"CellID";
 	}
 }
 
-- (void)setTimeInterval:(NSTimeInterval)timeInterval
-{
+- (void)setTimeInterval:(NSTimeInterval)timeInterval{
 	_timeInterval = timeInterval;
 	if (timeInterval <= 0) {
 		_timeInterval = 2.0f;
