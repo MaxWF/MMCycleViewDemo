@@ -26,6 +26,7 @@
 	NSArray *array = @[@"1.jpg", @"2.jpg", @"3.jpg", @"4.jpg"];
 
 	MMCycleView *cycleView = [MMCycleView creatMMViewWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200) localArray:array];
+	cycleView.timeInterval = 100;
 	[self.view addSubview:cycleView];
 }
 

@@ -58,7 +58,7 @@ static NSString *CellID = @"CellID";
 }
 
 - (void)initialize{
-	_timeInterval = 2.0f;
+//	_timeInterval = 2.0f;
 	
 	[self addSubview:self.MMCollectionView];
 }
@@ -84,7 +84,7 @@ static NSString *CellID = @"CellID";
 		return;
 	}
 	
-	self.MMTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+	self.MMTimer = [NSTimer scheduledTimerWithTimeInterval:self.timeInterval target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
 	[[NSRunLoop mainRunLoop] addTimer:_MMTimer forMode:NSRunLoopCommonModes];
 }
 
